@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui, "Segoe UI";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#main-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-title {
+  margin-bottom: 1rem;
+}
+
+.box-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.box-wrapper .box {
+  max-width: 32%;
+  border: 1px solid gray;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box-wrapper .box:hover {
+  background: linear-gradient(
+    to bottom left,
+    rgb(147, 30, 241),
+    rgb(215, 8, 253)
+  );
+  transition: background 1s ease;
+  color: #fff;
+  cursor: pointer;
+}
+
+.box-wrapper .box:hover img {
+  background-color: #fff;
+}
+
+.box-wrapper .box:hover a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.box-wrapper .box {
+  width: 80%;
+  height: 20%;
+
+  display: flex;
+  gap: 0.7rem;
+}
+
+.box-wrapper .box img {
+  width: 20%;
+  height: auto;
+  object-fit: cover;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+}
+
+.box a {
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  #main-section {
+    min-height: 120vh;
+  }
+
+  .box-wrapper .box {
+    min-width: 48%;
+  }
+}
+
+@media (max-width: 500px) {
+  #main-section {
+    min-height: 150vh;
+  }
+  .box-wrapper .box {
+    min-width: 100%;
+  }
+}
